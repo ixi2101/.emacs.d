@@ -37,6 +37,11 @@
 
 (show-paren-mode 1)
 (ido-mode 1)
+(ido-everywhere 1)
+
+(use-package ido-completing-read+
+  :config
+  (ido-ubiquitous-mode 1))
 ;;(setq ido-enable-flex-matching t)
 
 (use-package no-littering)
@@ -67,7 +72,7 @@
    '("e3daa8f18440301f3e54f2093fe15f4fe951986a8628e98dcd781efbec7a46f2" "2dd4951e967990396142ec54d376cced3f135810b2b69920e77103e0bcedfba9" default))
  '(helm-minibuffer-history-key "M-p")
  '(package-selected-packages
-   '(magit evil-magit rg tree-sitter-langs rustic company corfu eglot telephone-line dashboard no-littering evil-collection evil ivy helm-projectile projectile doom-themes which-key use-package)))
+   '(yasnippet magit evil-magit rg tree-sitter-langs rustic company corfu eglot telephone-line dashboard no-littering evil-collection evil ivy helm-projectile projectile doom-themes which-key use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -163,4 +168,9 @@
 ;; magit
 
 (use-package magit)
+
+(use-package yasnippet
+  :config
+  (yas-global-mode 1))
+
 
